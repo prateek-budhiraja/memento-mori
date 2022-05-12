@@ -7,6 +7,7 @@ function App() {
 
   // function to bring retreive date from local storage if available
   const getLocalDOB = () => {
+    console.log("fetching data")
     const localDOB = new Date(localStorage.getItem("dob"));
     console.log("fetching local data", localDOB);
     if(localDOB){
@@ -27,7 +28,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("dob", dob.toString());
   }, [dob])
-
 
   return (
     <div className="App">
