@@ -66,3 +66,22 @@ form {
     font-size: 2rem;
   }
 }
+
+
+
+.remove-element {
+  animation: remove-animate .6s linear;
+}
+
+
+@keyframes remove-animate {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-15rem);
+    opacity: 0;
+  }
+}
