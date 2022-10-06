@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #3c6382;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Crimson Text', serif;
+}
+
+label {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #f5f6fa;
+  font-weight: 700;
+}
+
+input[type="date"] {
+  font-size: 1.2rem;
+  background: transparent;
+  color: #f5f6fa;
+  border: 1px solid #f5f6fa;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#submit-dob {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 1px solid #3c6382;
+  background: #f5f6fa;
+  color: #1f1f1f;
+  font-size: 1rem;
+}
+
+#submit-dob:hover {
+  border: 1px solid #f5f6fa;
+  background: transparent;
+  color: #f5f6fa;
+}
+
+
+@media screen and (min-width: 700px) {
+  #submit-dob {
+    font-size: 1.2rem;
+  }
+
+  input[type="date"] {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 2rem;
+  }
+}
