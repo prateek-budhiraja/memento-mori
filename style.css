@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #3c6382;
+  background-color: #16213E;
   height: 100vh;
   display: grid;
   justify-content: center;
@@ -17,7 +17,7 @@ body {
 
 #title {
   padding-top: 40px;
-  color: #f5f6fa;
+  color: #ECB365;
 }
 
 label {
@@ -116,11 +116,27 @@ form {
     font-size: 1.2rem;
   }
 
+  #title {
+    padding-top: 60px;
+  }
+
   input[type="date"] {
     font-size: 1.8rem;
   }
 
   label {
     font-size: 2rem;
+  }
+
+  #timer-container {
+    padding: 20px 40px;
+  }
+
+  #quote {
+    font-size: 1.8rem;
+  }
+
+  #timer {
+    font-size: 3rem;
   }
 }
