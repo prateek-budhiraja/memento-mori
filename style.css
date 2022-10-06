@@ -12,10 +12,15 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Crimson Text', serif;
+  text-align: center;
+}
+
+#title {
+  padding-top: 40px;
+  color: #f5f6fa;
 }
 
 label {
-  text-align: center;
   font-size: 1.6rem;
   color: #f5f6fa;
   font-weight: 700;
@@ -53,24 +58,30 @@ form {
 }
 
 
-@media screen and (min-width: 700px) {
-  #submit-dob {
-    font-size: 1.2rem;
-  }
-
-  input[type="date"] {
-    font-size: 1.8rem;
-  }
-
-  label {
-    font-size: 2rem;
-  }
+#timer-container {
+  padding: 20px;
+  text-align: center;
+  display: none;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
 }
 
+#quote {
+  font-size: 1.2rem;
+  color: #f5f6fa;
+}
 
+#timer {
+  color: #EEF1FF;
+}
 
 .remove-element {
   animation: remove-animate .6s linear;
+}
+
+.add-element {
+  animation: add-animate .6s linear;
 }
 
 
@@ -83,5 +94,33 @@ form {
   to {
     transform: translateY(-15rem);
     opacity: 0;
+  }
+}
+
+@keyframes add-animate {
+  from {
+    transform: translateY(15rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* for larger screens */
+
+@media screen and (min-width: 700px) {
+  #submit-dob {
+    font-size: 1.2rem;
+  }
+
+  input[type="date"] {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 2rem;
   }
 }
