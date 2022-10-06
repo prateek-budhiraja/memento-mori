@@ -20,6 +20,10 @@ body {
   color: #ECB365;
 }
 
+.important {
+  color: #DD5353;
+}
+
 label {
   font-size: 1.6rem;
   color: #f5f6fa;
@@ -42,7 +46,7 @@ form {
   gap: 2rem;
 }
 
-#submit-dob {
+button {
   padding: 8px 20px;
   border-radius: 10px;
   border: 1px solid #3c6382;
@@ -51,7 +55,7 @@ form {
   font-size: 1rem;
 }
 
-#submit-dob:hover {
+button:hover {
   border: 1px solid #f5f6fa;
   background: transparent;
   color: #f5f6fa;
@@ -65,6 +69,7 @@ form {
   display: none;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 #quote {
@@ -112,12 +117,12 @@ form {
 /* for larger screens */
 
 @media screen and (min-width: 700px) {
-  #submit-dob {
-    font-size: 1.2rem;
+  #title {
+    font-size: 2.5em;
   }
 
-  #title {
-    padding-top: 60px;
+  #submit-dob {
+    font-size: 1.2rem;
   }
 
   input[type="date"] {

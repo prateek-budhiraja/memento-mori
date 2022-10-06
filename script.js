@@ -2,15 +2,17 @@ const dobPickerForm = document.getElementById("dob-picker");
 const dobInput = document.getElementById("dob");
 const timerContainer = document.getElementById("timer-container");
 const timer = document.getElementById("timer");
+const pauseBtn = document.getElementById("pause-btn");
 
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let days = 0;
 
-dobPickerForm.addEventListener("submit", (e) => {
-	e.preventDefault();
+dobPickerForm.addEventListener("submit", (submit) => {
+	submit.preventDefault();
 	let userDob = dob.valueAsDate;
+	if (!userDob) return;
 	dobPickerForm.classList.add("remove-element");
 	setTimeout(() => {
 		dobPickerForm.style.display = "none";
@@ -34,7 +36,7 @@ const displayTimer = (dobAsNumber) => {
 	seconds = 59;
 
 	const timerInterval = setInterval(() => {
-		timer.innerText = getRemainingTime();
+		timer.innerHTML = getRemainingTime();
 		if (hours === 0 && minutes === 0 && seconds === 0) {
 			clearInterval(timerInterval);
 		}
@@ -57,9 +59,18 @@ function getRemainingTime() {
 		days--;
 	}
 
-	return `${days} Days, ${hours > 9 ? hours : "0" + hours}:${
+	return `${days} Days<span class="important">,</span> ${
+		hours > 9 ? hours : "0" + hours
+	}<span class="important">:</span>${
 		minutes > 9 ? minutes : "0" + minutes
-	}:${seconds > 9 ? seconds : "0" + seconds} left`;
+	}<span class="important">:</span>${
+		seconds > 9 ? seconds : "0" + seconds
+	} <span style="text-decoration: underline;">left</span>`;
 }
+
+pauseBtn.addEventListener(
+	"click",
+	() => (pauseBtn.innerText = "Sadly it doesn't work that way ☠️")
+);
 
 const displayLifeInWeeks = (dobInString) => {};
