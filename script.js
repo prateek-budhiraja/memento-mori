@@ -94,8 +94,12 @@ function getRemainingTime() {
 }
 
 pauseBtn.addEventListener(
-	"click",
+	"mouseenter",
 	() => (pauseBtn.innerText = "Sadly it doesn't work that way ☠️")
+);
+pauseBtn.addEventListener(
+	"mouseleave",
+	() => (pauseBtn.innerText = "Pause Time ⏸️")
 );
 
 function displayLifeInWeeks() {
