@@ -166,24 +166,21 @@ label {
 
 #life-in-week-container {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
+  grid-template-columns: repeat(auto-fill, 15px);
+  ;
   gap: 4px;
   padding: 10px
 }
 
 .box {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border: 1px solid #2B4865;
   border-radius: 2px;
 }
 
 .box-fill {
-  height: 10px;
-  width: 10px;
-  border: 1px solid #2B4865;
   background-color: #2B4865;
-  border-radius: 2px;
 }
 
 @keyframes remove-animate {
@@ -271,6 +268,20 @@ label {
   #days,
   #hours {
     padding: 30px 0;
+  }
+
+  #life-in-week-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20px);
+    ;
+    gap: 4px;
+    padding: 20px 5%;
+  }
+
+  .box {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
   }
 
 }

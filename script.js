@@ -106,9 +106,8 @@ function displayLifeInWeeks() {
 	let weeksLeft = days / 7;
 	for (i = 0; i < 4170; i++) {
 		let weekBox = document.createElement("div");
-		i <= 4170 - weeksLeft
-			? weekBox.classList.add("box-fill")
-			: weekBox.classList.add("box");
+		weekBox.classList.add("box");
+		i <= 4170 - weeksLeft ? weekBox.classList.add("box-fill") : "";
 		lifeInWeeksContainer.append(weekBox);
 	}
 }
