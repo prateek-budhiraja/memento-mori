@@ -103,6 +103,8 @@ pauseBtn.addEventListener(
 );
 
 function displayLifeInWeeks() {
+	let weeksTitle = document.getElementById("life-week-title");
+	weeksTitle.style.display = "block";
 	let weeksLeft = days / 7;
 	for (i = 0; i < 4170; i++) {
 		let weekBox = document.createElement("div");

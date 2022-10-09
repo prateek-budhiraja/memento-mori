@@ -160,6 +160,7 @@ label {
 }
 
 #life-week-title {
+  display: none;
   font-family: 'Peralta', cursive;
   margin-bottom: 20px;
 }
